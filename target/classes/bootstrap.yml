@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active:
+       git
+       #native
+   #http://localhost:8071/customer-management/default
+   #By default this is the env
+  cloud:
+    config:
+      server:
+         git:
+            uri: https://github.com/rahul7gh/cdac-config-server.git
+            searchPaths: config
+#        native:
+#          search-locations: classpath:/config
+            
+server:
+  port: 8071
